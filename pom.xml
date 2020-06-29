@@ -33,7 +33,7 @@
 
     <groupId>org.openingo.kits</groupId>
     <artifactId>mybatis-x</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>mybatis-x</name>
     <description>MyBatis(Plus) Extensions</description>
 
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>org.openingo.kits</groupId>
             <artifactId>jdkits</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
