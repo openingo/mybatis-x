@@ -62,8 +62,8 @@ strategy.setSuperEntityClass(MpModelExt.class); // MpModelExt在这里
   UserDO.dao(UserDO.class).eq(UserDO::getUserName, "qicz").eq(UserDO::getSex: 1).select(UserDO::getUserId, UserDO::getUserName).doQueryLimitOne();
   ```
 
-  > 会自动在queryWrapper拼接`LIMIT 1`，不影响添加`LIMIT 1`之后的其他操作(MyBatis-Plus只能进行一次last操作的问题解决)。
-
+  > 【暂仅支持MySQL】会自动在queryWrapper拼接`LIMIT 1`，不影响添加`LIMIT 1`之后的其他操作(MyBatis-Plus只能进行一次last操作的问题解决)。
+                                                                                                                                                                                                                                                                         
 - doQueryOne
 
   ```java
