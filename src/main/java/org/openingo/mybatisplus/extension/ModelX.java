@@ -25,7 +25,7 @@
  * SOFTWARE.
  */
 
-package org.openingo.mp.ext;
+package org.openingo.mybatisplus.extension;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.core.conditions.AbstractLambdaWrapper;
@@ -44,12 +44,12 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
- * MyBatis Plus Extensions: ModelExt
+ * MyBatis Plus Extensions: ModelX
  *
  * @author Qicz
  */
 @SuppressWarnings({"unchecked", "rawtypes"})
-public abstract class MpModelExt<T extends MpModelExt<?>> extends Model<T> {
+public abstract class ModelX<T extends ModelX<?>> extends Model<T> {
 
     @TableField(exist = false)
     private final T typedThis = (T) this;
@@ -65,7 +65,7 @@ public abstract class MpModelExt<T extends MpModelExt<?>> extends Model<T> {
      * @param clazz
      * @param <T>
      */
-    private static<T extends MpModelExt<?>> T getInstance(Class<T> clazz) {
+    private static<T extends ModelX<?>> T getInstance(Class<T> clazz) {
         T t = null;
         try {
             t = clazz.newInstance();
@@ -82,7 +82,7 @@ public abstract class MpModelExt<T extends MpModelExt<?>> extends Model<T> {
      * @param <T>
      * @return T
      */
-    public static<T extends MpModelExt<?>> T dao(Class<T> clazz) {
+    public static<T extends ModelX<?>> T dao(Class<T> clazz) {
         return getInstance(clazz);
     }
 

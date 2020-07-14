@@ -27,13 +27,13 @@
 
 package org.openingo.mp.ext.demo;
 
-import org.openingo.mp.ext.MpModelExt;
+import org.openingo.mp.ext.MpModelX;
 
 /**
  * DO test
  *
  * @author Qicz
  */
-public class demoDO extends MpModelExt<demoDO> {
+public class demoDO extends MpModelX<demoDO> {
 
 }
