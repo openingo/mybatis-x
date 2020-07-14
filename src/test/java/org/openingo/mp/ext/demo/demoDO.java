@@ -27,13 +27,14 @@
 
 package org.openingo.mp.ext.demo;
 
-import org.openingo.mp.ext.MpModelX;
+
+import org.openingo.mybatisplus.extension.ModelX;
 
 /**
  * DO test
  *
  * @author Qicz
  */
-public class demoDO extends MpModelX<demoDO> {
+public class demoDO extends ModelX<demoDO> {
 
 }
