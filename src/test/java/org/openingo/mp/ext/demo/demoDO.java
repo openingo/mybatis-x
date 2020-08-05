@@ -28,13 +28,66 @@
 package org.openingo.mp.ext.demo;
 
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import org.openingo.mybatisplus.extension.ModelX;
+
+import java.io.Serializable;
 
 /**
  * DO test
  *
  * @author Qicz
  */
-public class demoDO extends ModelX<demoDO> {
+@TableName("demo")
+public class DemoDO extends ModelX<DemoDO> {
+    private static final long serialVersionUID=1L;
 
+    @TableId(value = "demo_id", type = IdType.AUTO)
+    private Integer demoId;
+
+    private String username;
+
+    private String addr;
+
+    private Integer age;
+
+    @Override
+    protected Serializable pkVal() {
+        return this.demoId;
+    }
+
+
+    public Integer getDemoId() {
+        return demoId;
+    }
+
+    public void setDemoId(Integer demoId) {
+        this.demoId = demoId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getAddr() {
+        return addr;
+    }
+
+    public void setAddr(String addr) {
+        this.addr = addr;
+    }
 }

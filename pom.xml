@@ -66,7 +66,22 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <mybatis-plus.version>3.3.2</mybatis-plus.version>
         <jdkits.version>2.0</jdkits.version>
+        <springboot.version>2.1.8.RELEASE</springboot.version>
+        <mysql.sersion>8.0.17</mysql.sersion>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--spring boot 统一依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -80,6 +95,18 @@
             <artifactId>jdkits</artifactId>
             <version>${jdkits.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.sersion}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

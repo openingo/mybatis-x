@@ -1,0 +1,18 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/qicz?useSSL=false&serverTimezone=GMT%2B8&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+      idle-timeout: 10000
+    username: root
+    password: dbadmin
+
+
+# mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
