@@ -12,7 +12,7 @@
 
 #### features
 
-- MpModelExt: 针对MyBatis-Plus的Model扩展
+- ModelX: 针对MyBatis-Plus的Model扩展
 
 #### 使用方式
 
@@ -23,7 +23,7 @@
 StrategyConfig strategy = new StrategyConfig();
 strategy.setNaming(NamingStrategy.underline_to_camel);
 strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-strategy.setSuperEntityClass(MpModelExt.class); // MpModelExt在这里
+strategy.setSuperEntityClass(ModelX.class); // MpModelExt在这里
 ```
 
 #### 示例
@@ -32,7 +32,7 @@ strategy.setSuperEntityClass(MpModelExt.class); // MpModelExt在这里
 >
 > ```java
 > @TableName("t_user")
-> public UserDO extends MpModelExt<UserDO> {
+> public UserDO extends ModelX<UserDO> {
 >   private static final long serialVersionUID=1L;
 >   
 >   @TableId(value = "user_id", type = IdType.AUTO)
