@@ -23,7 +23,7 @@
 StrategyConfig strategy = new StrategyConfig();
 strategy.setNaming(NamingStrategy.underline_to_camel);
 strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-strategy.setSuperEntityClass(ModelX.class); // MpModelExt在这里
+strategy.setSuperEntityClass(ModelX.class); // ModelX在这里
 ```
 
 #### 示例
