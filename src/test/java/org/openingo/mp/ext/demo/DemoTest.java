@@ -2,6 +2,7 @@ package org.openingo.mp.ext.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.openingo.jdkits.sys.SystemClockKit;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -18,7 +19,7 @@ public class DemoTest {
     public void save() {
         DemoDO d = new DemoDO();
         d.setAge(12);
-        d.setUsername("qicz12");
+        d.setUsername("qicz12"+ SystemClockKit.now());
         d.insert();
     }
 

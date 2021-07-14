@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2020 OpeningO Co.,Ltd.
+ * Copyright (c) 2021 OpeningO Co.,Ltd.
  *
  *    https://openingo.org
  *    contactus(at)openingo.org
@@ -25,7 +25,7 @@
  * SOFTWARE.
  */
 
-package org.openingo.mybatisplus.extension;
+package org.openingo.boot.mybatisplus.extension;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.core.conditions.AbstractLambdaWrapper;
@@ -36,7 +36,8 @@ import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.metadata.TableFieldInfo;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-import org.openingo.jdkits.JacksonKit;
+import lombok.SneakyThrows;
+import org.openingo.jdkits.json.JacksonKit;
 
 import java.util.*;
 import java.util.function.BiPredicate;
@@ -934,6 +935,7 @@ public abstract class ModelX<T extends ModelX<?>> extends Model<T> {
     /**
      * 转换为JsonString
      */
+    @SneakyThrows
     public String toJson() {
         return JacksonKit.toJson(this);
     }

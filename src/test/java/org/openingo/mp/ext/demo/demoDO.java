@@ -31,7 +31,7 @@ package org.openingo.mp.ext.demo;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import org.openingo.mybatisplus.extension.ModelX;
+import org.openingo.boot.mybatisplus.extension.ModelX;
 
 import java.io.Serializable;
 
@@ -54,7 +54,7 @@ public class DemoDO extends ModelX<DemoDO> {
     private Integer age;
 
     @Override
-    protected Serializable pkVal() {
+    public Serializable pkVal() {
         return this.demoId;
     }
 
