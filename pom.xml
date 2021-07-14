@@ -34,11 +34,11 @@
     <parent>
         <groupId>org.openingo.boot</groupId>
         <artifactId>openingo-boot-dependencies</artifactId>
-        <version>1.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <artifactId>mybatis-x</artifactId>
-    <version>3.0</version>
+    <version>3.0.1</version>
     <name>mybatis-x</name>
     <description>MyBatis(Plus) Extensions</description>
 
