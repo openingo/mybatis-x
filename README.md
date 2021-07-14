@@ -1,10 +1,10 @@
 ### MyBatis(Plus) Extensions
 
-![maven](https://img.shields.io/maven-central/v/org.openingo.kits/mybatis-x.svg)
+![maven](https://img.shields.io/maven-central/v/org.openingo.boot/mybatis-x.svg)
 
 ```xml
 <dependency>
-  <groupId>org.openingo.kits</groupId>
+  <groupId>org.openingo.boot</groupId>
   <artifactId>mybatis-x</artifactId>
   <version>new_version</version>
 </dependency>
