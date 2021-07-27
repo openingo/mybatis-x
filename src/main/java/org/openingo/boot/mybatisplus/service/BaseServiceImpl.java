@@ -25,31 +25,17 @@
  * SOFTWARE.
  */
 
-package org.openingo.mp.ext.demo;
+package org.openingo.boot.mybatisplus.service;
 
-import org.openingo.boot.mybatisplus.enums.StringEnum;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 /**
- * TODO
+ * BaseServiceImpl
  *
  * @author Qicz
- * @since 2021/7/23 15:19
+ * @since 2021/7/26 15:37
  */
-public enum Str implements StringEnum {
-	;
+public class BaseServiceImpl<VO, DO, MAPPER extends BaseMapper<DO>> extends ServiceImpl<MAPPER, DO> {
 
-	@Override
-	public String getCode() {
-		return null;
-	}
-
-	@Override
-	public int intVal() {
-		return 0;
-	}
-
-	@Override
-	public String strVal() {
-		return null;
-	}
 }
