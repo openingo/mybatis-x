@@ -41,7 +41,7 @@ import java.util.List;
  * @author Qicz
  * @since 2021/7/26 15:35
  */
-public interface IBaseService<VO, DO> extends IService<DO>  {
+public interface IBaseService<VO, DO, PUT_DATA> extends IService<DO>  {
 
 	/**
 	 * put之前的工作
@@ -71,6 +71,14 @@ public interface IBaseService<VO, DO> extends IService<DO>  {
 	 */
 	default void afterPut(VO vo, DO aDo) {
 
+	}
+
+	/**
+	 * 获取afterPut放的数据
+	 * @return afterPut放入的数据
+	 */
+	default PUT_DATA getAfterPut() {
+		return null;
 	}
 
 	/**
